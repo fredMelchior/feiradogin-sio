@@ -7,49 +7,50 @@
     <link rel="stylesheet" href="styles.css"> <!-- Link para um arquivo CSS se necessário -->
 </head>
 <body>
+    <a href="/feirantes">Feirantes</a>
     <h1>Cadastro de Feirantes</h1>
 
     <h2>Cadastrar Feirante</h2>
-    <form id="formFeirante">
+    <form id="formFeirante" onsubmit="cadastrarFeirante(event)">
         <input type="text" name="nome" placeholder="Nome do Feirante" required>
         <input type="text" name="contato" placeholder="Contato">
         <button type="submit">Cadastrar</button>
     </form>
 
     <h2>Cadastrar Recurso</h2>
-    <form id="formRecurso">
+    <form id="formRecurso" onsubmit="cadastrarRecurso(event)">
         <input type="text" name="tipo" placeholder="Tipo de Recurso" required>
         <input type="number" name="quantidade" placeholder="Quantidade" required>
         <button type="submit">Cadastrar</button>
     </form>
 
     <h2>Cadastrar Espaço</h2>
-    <form id="formEspaco">
+    <form id="formEspaco" onsubmit="cadastrarEspaco(event)">
         <input type="text" name="nome" placeholder="Nome do Espaço" required>
         <input type="number" name="capacidade" placeholder="Capacidade" required>
         <button type="submit">Cadastrar</button>
     </form>
 
     <h2>Alocar Recursos</h2>
-    <form id="formAlocacao">
+    <form id="formAlocacao" onsubmit="alocarRecursos(event)">
         <select name="feirante_id" required>
-            <!-- As opções devem ser populadas com dados do banco -->
             <option value="">Selecione o Feirante</option>
+            <!-- As opções devem ser populadas com dados do banco -->
         </select>
         <select name="recurso_id" required>
-            <!-- As opções devem ser populadas com dados do banco -->
             <option value="">Selecione o Recurso</option>
+            <!-- As opções devem ser populadas com dados do banco -->
         </select>
         <select name="espaco_id" required>
-            <!-- As opções devem ser populadas com dados do banco -->
             <option value="">Selecione o Espaço</option>
+            <!-- As opções devem ser populadas com dados do banco -->
         </select>
         <input type="date" name="data" required>
         <button type="submit">Alocar</button>
     </form>
 
     <h2>Editar Feirante</h2>
-    <form id="formEditFeirante">
+    <form id="formEditFeirante" onsubmit="editarFeirante(event)">
         <input type="number" name="id" placeholder="ID do Feirante" required>
         <input type="text" name="nome" placeholder="Novo Nome" required>
         <input type="text" name="contato" placeholder="Novo Contato">
@@ -57,11 +58,11 @@
     </form>
 
     <h2>Deletar Feirante</h2>
-    <form id="formDeleteFeirante">
+    <form id="formDeleteFeirante" onsubmit="deletarFeirante(event)">
         <input type="number" name="id" placeholder="ID do Feirante" required>
         <button type="submit">Deletar</button>
     </form>
 
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 </body>
 </html>
