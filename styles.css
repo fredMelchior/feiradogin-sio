@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+h2, form {
+    padding: 8px 24px;
+}
+
+form {
+    background-color: grey;
+}
+
+input, button, select {
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+}
+
+select {
+    margin-bottom: 16px;
+}
+
+@media (max-width: 767px) {
+    h2 {
+        text-align: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    input, button, select {
+        margin-bottom: 16px;
+    }
+}

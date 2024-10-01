@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Feirantes</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para um arquivo CSS se necessário -->
+</head>
+<body>
+    <h1>Cadastro de Feirantes</h1>
+
+    <h2>Cadastrar Feirante</h2>
+    <form id="formFeirante">
+        <input type="text" name="nome" placeholder="Nome do Feirante" required>
+        <input type="text" name="contato" placeholder="Contato">
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Cadastrar Recurso</h2>
+    <form id="formRecurso">
+        <input type="text" name="tipo" placeholder="Tipo de Recurso" required>
+        <input type="number" name="quantidade" placeholder="Quantidade" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Cadastrar Espaço</h2>
+    <form id="formEspaco">
+        <input type="text" name="nome" placeholder="Nome do Espaço" required>
+        <input type="number" name="capacidade" placeholder="Capacidade" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Alocar Recursos</h2>
+    <form id="formAlocacao">
+        <select name="feirante_id" required>
+            <!-- As opções devem ser populadas com dados do banco -->
+            <option value="">Selecione o Feirante</option>
+        </select>
+        <select name="recurso_id" required>
+            <!-- As opções devem ser populadas com dados do banco -->
+            <option value="">Selecione o Recurso</option>
+        </select>
+        <select name="espaco_id" required>
+            <!-- As opções devem ser populadas com dados do banco -->
+            <option value="">Selecione o Espaço</option>
+        </select>
+        <input type="date" name="data" required>
+        <button type="submit">Alocar</button>
+    </form>
+
+    <h2>Editar Feirante</h2>
+    <form id="formEditFeirante">
+        <input type="number" name="id" placeholder="ID do Feirante" required>
+        <input type="text" name="nome" placeholder="Novo Nome" required>
+        <input type="text" name="contato" placeholder="Novo Contato">
+        <button type="submit">Atualizar</button>
+    </form>
+
+    <h2>Deletar Feirante</h2>
+    <form id="formDeleteFeirante">
+        <input type="number" name="id" placeholder="ID do Feirante" required>
+        <button type="submit">Deletar</button>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
